@@ -18,3 +18,7 @@ Desktop.ini
 
 # Local knowledge base
 konwledge/
+
+# Python
+__pycache__/
+*.pyc

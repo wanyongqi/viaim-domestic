@@ -1,10 +1,10 @@
 ---
 alwaysApply: false
-description: viaim迭代版本测试报告生成规范（基于缺陷Excel + 功能点文档自动生成完整报告）
+description: viaim迭代版本测试报告生成规范（基于缺陷Excel + 功能点文档自动生成 .docx 报告）
 ---
 # 测试报告生成规范
 
-本规则用于在迭代测试完成后，基于缺陷 Excel 表格和功能点简约描述，自动生成完整版测试报告 Markdown 文档。
+本规则用于在迭代测试完成后，基于缺陷 Excel 表格和功能点简约描述，通过 `scripts/generate_report.py` 自动生成完整版测试报告 .docx 文档（以 V6.3.0 报告为样式模板）。
 
 详细操作流程见 skill：[test-report-generation/SKILL.md](mdc:.cursor/skills/test-report-generation/SKILL.md)
 
@@ -61,7 +61,9 @@ description: viaim迭代版本测试报告生成规范（基于缺陷Excel + 功
    - 已知问题列表（暂不修复问题清单）
 
 ## 输出规范
-- 输出完整 Markdown 格式，文件保存至 `xxx版本/测试报告_国内viaim_Vx.x.x.md`
-- 所有统计数字必须从 Excel 解析后得出，不得估算
-- 功能点评估列直接插入简约版测试点内容，结果列统一填"通过"
+- 输出 .docx 格式，文件保存至 `xxx版本/测试报告_国内viaim_Vx.x.x.docx`
+- 静态样式（字体、表格边框、封面、页眉页脚、公司信息）由模板 `630版本/测试报告_国内viaim_V6.3.0.docx` 保留
+- 所有统计数字必须从 Excel 现场解析得出，不得估算或凑整
+- 功能点评估列直接插入简约版测试点内容，测试结果列统一填"通过"
 - 遗留问题说明中：非【严重】缺陷需在风险评估中明确标注
+- 脚本自动生成的未填项（已知问题表"原因分析"列、版本记录表"变更措施"列）交付前提醒用户人工补充
