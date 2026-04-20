@@ -5,7 +5,9 @@
       "Bash(mv 用例输出要求.md docs/)",
       "Bash(mv \"Git操作速查.md\" docs/)",
       "Bash(mkdir -p versions)",
-      "Bash(mv \"620版本\" versions/620)"
+      "Bash(mv \"620版本\" versions/620)",
+      "Bash(python3 -c ':*)",
+      "Bash(python -c ':*)"
     ]
   }
 }

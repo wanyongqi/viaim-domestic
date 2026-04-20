@@ -19,3 +19,6 @@ Desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# KB source files (product manager reference docs)
+国内&海外viaim app知识库/
