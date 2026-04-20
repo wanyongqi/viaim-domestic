@@ -1,6 +1,6 @@
 # 业务知识库说明（viaim）
 
-> 版本：V2.2.0 | 最后更新：2026-04
+> 版本：V2.3.0 | 最后更新：2026-04-20
 
 本目录沉淀 viaim 产品的业务规则、功能规格与测试参考数据，供测试人员查阅和 AI 生成测试内容时引用。
 
@@ -58,8 +58,8 @@ business/
 │   │   ├── recording/                # 4大录音（与海外同 4 类）
 │   │   ├── translation/              # 🆕 3大翻译（同传/面对面/通话；国内专属）
 │   │   │   ├── README.md            # 3大翻译总览（对比矩阵/共用规则）
-│   │   │   ├── face-to-face-translation.md  # 🔲 骨架：面对面翻译
-│   │   │   └── call-translation.md  # 🔲 骨架：通话翻译
+│   │   │   ├── face-to-face-translation.md  # ✅ 面对面翻译（33种语言/首次引导/角色分工UI）
+│   │   │   └── call-translation.md  # ✅ 通话翻译（35种/双耳必戴/左耳原声+右耳嘴替/设置弹窗）
 │   │   ├── flash-record.md           # 闪录
 │   │   ├── record-list.md            # 记录列表
 │   │   ├── detail-page.md            # 详情页（无文档类型）
@@ -73,8 +73,8 @@ business/
 │   │   ├── search.md                 # 全局搜索
 │   │   ├── message-center.md         # 消息中心
 │   │   ├── login-register.md         # 登录注册（手机号+短信）
-│   │   ├── home.md                   # 🔲 待补充：首页
-│   │   └── discover.md               # 🔲 待补充：发现
+│   │   ├── home.md                   # ✅ 首页（未/已连接耳机两态、4快捷入口、录音弹窗2Tab、运营位）
+│   │   └── discover.md               # ✅ 发现页（2×2快捷入口/运营位/放松音乐，多由后台配置）
 │   │
 │   ├── viaim-web/                     # 海外 Web 端功能规格
 │   │   ├── login.md                  # 登录
@@ -111,12 +111,14 @@ business/
 │       └── languages-readme.md       # 字段/语种数/优先级/抽样指南
 │
 └── test-focus/                        # 测试关注点
-    └── viaim/
-        ├── typical-defects.md         # 典型缺陷模式库（错误推测法输入）
-        ├── testpoint-examples.md      # 高质量测试点样例库（格式与深度参考）
-        ├── regression-focus.md        # 🔲 待建：回归关注点
-        ├── risky-scenarios.md         # 🔲 待建：高风险场景
-        └── platform-diff.md           # 🔲 待建：Android/iOS/Web 差异汇总
+    ├── viaim/
+    │   ├── typical-defects.md         # 典型缺陷模式库（错误推测法输入）
+    │   ├── testpoint-examples.md      # 高质量测试点样例库（格式与深度参考）
+    │   ├── regression-focus.md        # 🔲 待建：回归关注点
+    │   ├── risky-scenarios.md         # 🔲 待建：高风险场景
+    │   └── platform-diff.md           # 🔲 待建：Android/iOS/Web 差异汇总
+    └── viaim-domestic/
+        └── regression-focus.md        # ✅ 国内版回归重点（已同步 630 合并录音规则）
 ```
 
 ---
@@ -264,10 +266,8 @@ business/
 | `product/viaim/overview.md` | ⭐⭐ | 产品概述与核心模块 |
 | `product/viaim/scope.md` | ⭐⭐ | 版本与平台范围（iOS/Android/版本号）|
 | `features/viaim/message-center.md` 消息类型 | ⭐⭐⭐ | 具体消息类型详细内容 |
-| `features/viaim-domestic/home.md` | ⭐⭐⭐ | 国内版首页 Tab 内容 |
-| `features/viaim-domestic/discover.md` | ⭐⭐⭐ | 国内版发现 Tab 内容 |
-| `features/viaim-domestic/translation/face-to-face-translation.md` | ⭐⭐⭐ | 面对面翻译完整规格（UI/交互/收音/记录归属）|
-| `features/viaim-domestic/translation/call-translation.md` | ⭐⭐⭐ | 通话翻译完整规格（与通话录音关系/播出方向）|
+| `test-focus/viaim-domestic/risky-scenarios.md` | ⭐⭐ | 国内版高风险场景清单 |
+| `test-focus/viaim-domestic/platform-diff.md` | ⭐⭐ | 国内版 Android / iOS 差异汇总 |
 | `domain/domestic/cloud-storage-toggle.md` ⚠️ 待确认项 | ⭐⭐⭐ | 默认值/本地转写/容量/降级细节 |
 | `reference-data/viaim/预制模版说明.md` | ⭐⭐ | 预制模版字段含义与使用方式 |
 | `reference-data/viaim/语种说明.md` | ⭐⭐ | 语种字段说明 |

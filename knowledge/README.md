@@ -32,7 +32,7 @@ knowledge/
 │   │   │
 │   │   └── domestic/                     # 仅国内版适用
 │   │       ├── overview.md               ✅ 国内版全局专属规则（无套餐/无Space/仅中英/仅深色）
-│   │       └── cloud-storage-toggle.md   🔲 云空间开关完整规则（开/关状态影响矩阵、容量）
+│   │       └── cloud-storage-toggle.md   🔲 云同步/云空间状态完整规则（开/关影响矩阵、容量）
 │   │
 │   ├── features/                          # 功能规格层（单功能一文档）
 │   │   ├── viaim/                         # 海外版 App（iOS / Android）功能规格
@@ -77,8 +77,8 @@ knowledge/
 │   │   │   ├── bluetooth-headset.md      ✅ 耳机型号与设置（型号差异、功能规格）
 │   │   │   ├── bluetooth-gesture.md      ✅ 耳机手势控制（更新弹窗规则、各型号键值）
 │   │   │   ├── bluetooth-connect.md      ✅ 耳机连接流程（首次/复连/MFI）
-│   │   │   ├── account-settings.md       ✅ 账号设置（手机号/删除账号/深色/语言）
-│   │   │   ├── my-preferences.md         ✅ 使用设置（录音/AI/云空间/权限，仅深色/中英）
+│   │   │   ├── account-settings.md       ✅ 账号设置（手机号/云同步/删除账号/深色/语言）
+│   │   │   ├── my-preferences.md         ✅ 使用设置（录音/AI/权限/技术支持，仅深色/中英）
 │   │   │   ├── widget.md                 ✅ 小组件（Android悬浮窗/通知栏/iOS负一屏/灵动岛）
 │   │   │   ├── search.md                 ✅ 全局搜索（点击触发/无文档筛选/无Space范围）
 │   │   │   ├── message-center.md         ✅ 消息中心（推送/有效期/未读角标）
@@ -117,12 +117,14 @@ knowledge/
 │   │       └── languages-readme.md       ✅ 字段/语种数/优先级/抽样指南
 │   │
 │   └── test-focus/                        # 测试关注点
-│       └── viaim/
-│           ├── typical-defects.md         ✅ 典型缺陷模式库（错误推测法输入）
-│           ├── testpoint-examples.md      ✅ 高质量测试点样例库（格式与深度参考）
-│           ├── regression-focus.md        🔲 回归关注点
-│           ├── risky-scenarios.md         🔲 高风险场景
-│           └── platform-diff.md           🔲 Android/iOS/Web 差异汇总
+│       ├── viaim/
+│       │   ├── typical-defects.md         ✅ 典型缺陷模式库（错误推测法输入）
+│       │   ├── testpoint-examples.md      ✅ 高质量测试点样例库（格式与深度参考）
+│       │   ├── regression-focus.md        🔲 回归关注点
+│       │   ├── risky-scenarios.md         🔲 高风险场景
+│       │   └── platform-diff.md           🔲 Android/iOS/Web 差异汇总
+│       └── viaim-domestic/
+│           └── regression-focus.md        ✅ 国内版回归重点（已同步 630 合并录音规则）
 │
 └── history/                               # 已归档的历史需求/知识
     └── upload-file.md
@@ -165,7 +167,7 @@ knowledge/
 | 写什么用例 | 引用文档 |
 |----------|---------|
 | 国内版专属规则/无套餐/无Space/仅中英/仅深色 | `domain/domestic/overview.md` |
-| 云空间开关状态/影响矩阵/容量规则 | `domain/domestic/cloud-storage-toggle.md` |
+| 云同步/云空间状态影响矩阵/容量规则 | `domain/domestic/cloud-storage-toggle.md` |
 
 ### App（iOS / Android）功能规格
 
@@ -229,12 +231,12 @@ knowledge/
 | 耳机手势控制/键值配置（国内）| `features/viaim-domestic/bluetooth-gesture.md` |
 | 耳机连接流程（国内）| `features/viaim-domestic/bluetooth-connect.md` |
 | 账号设置（国内App）| `features/viaim-domestic/account-settings.md` |
-| 使用设置/云空间/权限（国内）| `features/viaim-domestic/my-preferences.md` |
+| 使用设置/录音/AI/权限（国内）| `features/viaim-domestic/my-preferences.md` |
 | 小组件（悬浮窗/通知栏/灵动岛）| `features/viaim-domestic/widget.md` |
 | 全局搜索（国内App）| `features/viaim-domestic/search.md` |
 | 消息中心（国内App）| `features/viaim-domestic/message-center.md` |
 | 国内版专属规则（无套餐/无Space/仅中英/仅深色）| `domain/domestic/overview.md` |
-| 云空间开关状态/影响矩阵/容量 | `domain/domestic/cloud-storage-toggle.md` |
+| 云同步/云空间状态影响矩阵/容量 | `domain/domestic/cloud-storage-toggle.md` |
 
 ### 国内 Web 端功能规格
 
@@ -261,6 +263,7 @@ knowledge/
 | 🆕 国内语种字段/优先级/抽样指南 | `reference-data/viaim-domestic/languages-readme.md` |
 | 典型缺陷模式（错误推测法） | `test-focus/viaim/typical-defects.md` |
 | 高质量测试点样例 | `test-focus/viaim/testpoint-examples.md` |
+| 🆕 国内版回归重点（含合并录音） | `test-focus/viaim-domestic/regression-focus.md` |
 
 > 国内语种相关输出（转写/翻译语种数、优先级、抽样策略）必须**同时引用**：
 > `reference-data/viaim-domestic/languages.csv` + `reference-data/viaim-domestic/languages-readme.md`
