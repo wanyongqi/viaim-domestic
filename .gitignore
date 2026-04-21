@@ -22,3 +22,6 @@ __pycache__/
 
 # KB source files (product manager reference docs)
 国内&海外viaim app知识库/
+
+# Claude Code local settings
+.claude/settings.local.json
